@@ -13,7 +13,8 @@ namespace pexeso
         public int row;
         public int col;
         private Symbol[]? symbols;
-        public Card[]? cards;
+        public Card[] cards;
+        public int remaining;
         public Table()
         {
             try{
@@ -30,14 +31,17 @@ namespace pexeso
             }
             catch (FormatException)
             {
-                Console.WriteLine("Nu-uh, čísla pwosím :3\n");
+                Console.WriteLine("Nu-uh, čísla pwosím :3...jdu zemřít\n");
+                throw;
             }
             catch (ArgumentNullException){
-                Console.WriteLine("Nu-uh nully\n");
+                Console.WriteLine("Nu-uh nully, jdu zemřít\n");
+                throw;
             }
 
             gen_symbols();
             gen_cards();
+            remaining = cards.Length / 2;
         }
     
         private void gen_symbols()

@@ -6,21 +6,13 @@ using System.Threading.Tasks;
 
 namespace pexeso
 {
-    public class Game
+    public static class Game
     {
-        private int remaining;
-        private Table gameboard;
-        public Game(Table table)
+        public static void play(Table gameboard)
         {
-            remaining = table.cards.Length / 2;
-            gameboard = table;
-        }
-
-        public void play()
-        {
-            while (remaining > 0)
+            while (gameboard.remaining > 0)
             {
-                draw_table();
+                draw_table(gameboard);
                 Card[] g_cards = new Card[2];
                 int success = 0;
 
@@ -34,7 +26,7 @@ namespace pexeso
                         }
                         g_cards[i] = gameboard.cards[g.Item1*gameboard.col + g.Item2];
                         toggle_show(g_cards[i]);
-                        draw_table();
+                        draw_table(gameboard);
                         success++;
                     }
 
@@ -45,7 +37,7 @@ namespace pexeso
                     }
                     else
                     {
-                        remaining--;
+                        gameboard.remaining--;
                     }
                 }
                 catch (Exception)
@@ -64,7 +56,7 @@ namespace pexeso
             Console.WriteLine("Gratuluju, vyhrála jsi :3");
         }
 
-        public Tuple<int, int> get_guess()
+        public static Tuple<int, int> get_guess()
         {
             int g_row;
             int g_col;
@@ -87,13 +79,13 @@ namespace pexeso
             return new Tuple<int, int>(g_row, g_col);
         }
 
-        public void toggle_show(Card toggle)
+        public static void toggle_show(Card toggle)
         {
             if (toggle.found) {toggle.found = false;}
             else {toggle.found = true;}
         }
 
-        private void draw_table()
+        private static void draw_table(Table gameboard)
         {
             Console.WriteLine("Tvoje hra:");
             Console.WriteLine(new string('%', gameboard.col * 5));
