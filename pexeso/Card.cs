@@ -4,7 +4,6 @@ namespace pexeso
     {
         private int row;
         private int col;
-        // public Symbol? symbol;
         public int num;
         public bool found;
 

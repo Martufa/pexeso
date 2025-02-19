@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pexeso")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ccddbd38894b8758959e8f744fcb746e0aba5c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+243fbed3114ba27721461529a444ee7ec2750300")]
 [assembly: System.Reflection.AssemblyProductAttribute("pexeso")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pexeso")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

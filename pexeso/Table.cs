@@ -15,6 +15,17 @@ namespace pexeso
         private Symbol[]? symbols;
         public Card[] cards;
         public int remaining;
+
+        public class Symbol
+        {
+            public int id;
+            public int occurance;
+            public Symbol(int id)
+            {
+                this.id = id;
+                occurance = 0;
+            }
+        }
         public Table()
         {
             try{

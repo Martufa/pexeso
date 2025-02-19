@@ -17,3 +17,4 @@
 /home/azkee/Documents/fi/PV178/pexeso/pexeso.exe/pexeso.runtimeconfig.json
 /home/azkee/Documents/fi/PV178/pexeso/pexeso.exe/pexeso.dll
 /home/azkee/Documents/fi/PV178/pexeso/pexeso.exe/pexeso.pdb
+/home/azkee/Documents/fi/PV178/pexeso/pexeso/obj/Debug/net8.0/pexeso.sourcelink.json
